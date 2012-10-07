@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="newVersion.newCode"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+
+<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+    <application android:icon="@drawable/iconapplication" android:label="@string/app_name">
+    <uses-library android:name="com.google.android.maps"/>
+    <activity android:label="@string/app_name" android:name="StartCamera"/>
+    <activity android:label="@string/app_name" android:name="InitialScreen"/>
+    <activity android:label="@string/app_name" android:name=".MapScreen"/>
+    <activity android:label="@string/app_name" android:name="reminderComplete"/>
+    <activity android:label="@string/app_name" android:name="loadImage"/>
+    <activity android:label="@string/app_name" android:name="ReminderGUI"/>
+    <activity android:name="newVersion.newCode.CalendarActivity">
+    
+    <intent-filter>
+        <action android:name="android.intent.action.PICK" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="vnd.android.cursor.dir/vnd.exina.android.calendar.date" />
+    </intent-filter>
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="vnd.android.cursor.dir/vnd.exina.android.calendar.date" />
+    </intent-filter>
+</activity>
+      <activity android:name=".InitialScreen"
+                android:label="@string/app_name" >
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+              <category android:name="android.intent.category.DEFAULT"/>
+          </intent-filter>
+          
+      </activity>
+
+    </application>
+</manifest>

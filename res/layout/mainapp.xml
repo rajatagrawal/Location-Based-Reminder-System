@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:apiKey="0NDv0Vr3Yodo6IHM0bOcuDXjqkjxqYEDfddUA2Q">
+    </com.google.android.maps.MapView>
+    <EditText 
+    android:id="@+id/searchTextBox"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    </EditText>
+    <Button 
+    android:id="@+id/locationSearch"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/searchTextBox"
+    android:text="Search"></Button>
+    <Button
+    android:id="@+id/setAReminderButton"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Set a Reminder"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentBottom="true"
+    android:visibility="invisible"
+    ></Button>
+</RelativeLayout>
